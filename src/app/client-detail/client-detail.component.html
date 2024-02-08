@@ -1,0 +1,341 @@
+<div class="px-10">
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+  <h2>Client Details</h2>
+
+  <div class="client">
+    <div>
+      <label for="clientName"><span class="required">*</span>Client Name</label>
+    
+      <mat-select
+        id="clientName"
+        (selectionChange)="onClientNameChange()"
+        formControlName="clientName"
+        
+        >
+        <mat-option value="" disabled >Select Client</mat-option>
+        <input
+          type="text"
+          placeholder="Type here to Search"
+          matInput
+          [formControl]="clientSearchControl"
+          class="clientName"
+        />
+ 
+        <mat-option value="" disabled
+          >Please enter at least one characters</mat-option
+        >
+        <mat-option
+          *ngFor="let client of filteredClients"
+          [value]="client.name"
+        >
+          {{ client.name }}
+        </mat-option>
+      </mat-select>
+
+      <label for="clientEmail" style="padding-top: 8px">Email</label>
+      <input
+        id="clientEmail"
+        type="email"
+        formControlName="clientEmail"
+        style="background-color: #f2f3f4"
+        placeholder="Email"
+      />
+    </div>
+
+    <div>
+     <label for="CompanyName"><span class="required">*</span>Select Company</label>
+      <mat-select
+        id="companyName"
+        formControlName="companyName"
+       
+      >
+        <mat-option value="" disabled> Select Company</mat-option>
+        <mat-option *ngFor="let company of companies" [value]="company.name">{{company.name}}</mat-option>
+        
+      </mat-select>
+     <label style="padding-top: 8px">Contact Person</label>
+      <input type="text" formControlName="contactPerson"/>
+    </div>
+
+    <div>
+      <label for="shippingAddress">Ship To Address</label>
+      <textarea
+        id="shippingAddress"
+        type="text"
+        placeholder="Enter Address"
+        formControlName="clientAddress"
+        readonly
+        class="address"
+      ></textarea>
+     
+    </div>
+  </div>
+</form>
+
+
+<h2>Invoice Details</h2>
+
+<div class="invoice-details">
+  <div class="Item">
+    <label for="date">Date</label>
+    <input id="date" type="date" [(ngModel)]="date">
+  </div>
+  <div class="Item">
+    <label for="dueDate">Due Date</label>
+    <input id="dueDate" type="date" [(ngModel)]="dueDate" />
+  </div>
+  <div class="Item">
+    <label for="referenceCode">Purchase Reference #</label>
+    <input id="referenceCode" type="text" />
+  </div>
+  <div class="Item">
+    <label for="currency"><span class="required">*</span>Currency</label>
+    <mat-select [(ngModel)]="selectedCurrency" id="currency">
+      <mat-option *ngFor="let currency of currencies" [value]="currency.symbol">
+        {{ currency.name }}
+      </mat-option>
+    </mat-select>
+  </div>
+  <div class="Item">
+    <label for="exchangeRate"
+      ><span class="required">*</span>Exchange Rate</label
+    >
+    <input id="exchangeRate" type="number" formControlName="exchangeRate" required/>
+    
+  </div>
+  <div class="Item">
+    <label for="vatType"><span class="required">*</span>VAT Type</label>
+    <mat-select id="vatType" type="text" [(ngModel)]="vatType">
+      <mat-option value="">Standard VAT</mat-option>
+      <mat-option value="">Margin VAT</mat-option>
+      <mat-option value="">Reverse Charge</mat-option>
+      <mat-option value="">EC Sales</mat-option>
+      <mat-option value="">Zero Rate VAT</mat-option>
+    </mat-select>
+  </div>
+</div>
+
+ <form [formGroup]="productForm" >
+
+  <h2>Products</h2>
+ 
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>SKU</th>
+        <th>Category</th>
+        <th>Qty(Req/Acq)</th>
+        <th>Unit Price({{ getCurrencyShort() }})</th>
+        <th>VAT%</th>
+        <th>VAT Amount({{ getCurrencyShort() }})</th>
+        <th>
+          Gross Total({{ getCurrencyShort() }})
+        </th>
+        <th style="text-align: center">Action</th>
+      </tr>
+
+      <tbody>
+        <ng-container *ngIf="showProductForm">
+          <tr
+            class="tr-2"
+            *ngFor="let row of rows; let i = index"
+            [formGroup]="row"
+          >
+            <td class="productt">
+              
+              <mat-select
+                formControlName="productName"
+                (selectionChange)="row.get('onProductChange')?.value()"
+                style="text-align: center;padding: 8px;"
+              >
+                <mat-option value="" disabled>Product</mat-option>
+                <input type="text" matInput placeholder="Type here to Search" [formControl]="productSearchControl" class="clientName" />
+              
+                <mat-option
+                  *ngFor="let product of filteredProducts"
+                  [value]="product.name"
+                  >{{ product.name }}</mat-option
+                >
+
+              </mat-select>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="name"
+                placeholder="sku"
+                formControlName="sku"
+              /> 
+            </td>
+            <td class="categoryy">
+              <mat-select
+                id="Category"
+                type="text"
+                aria-placeholder="General Sales"
+                formControlName="category"
+              >
+                <mat-option value="">General Sales</mat-option>
+                <mat-option value="">Bank Charges</mat-option>
+                <mat-option value="">Capital Expenditures</mat-option>
+                <mat-option value="">Commissions Received</mat-option>
+                <mat-option value="">Credit Charges(late Pay...)</mat-option>
+                <mat-option value="">Discounts Allowed</mat-option>
+                <mat-option value="">Distribution and Carriage</mat-option>
+                <mat-option value="">Flat Rate VAT Sales Adju....</mat-option>
+                <mat-option value="">Furniture and Fixtures</mat-option>
+                <mat-option value="">General Export Sales</mat-option>
+                <mat-option value="">Goodwill</mat-option>
+                <mat-option value="">Goodwill Amortization</mat-option>
+                <mat-option value="">Insurance Claims</mat-option>
+                <mat-option value="">Intangible Asset Amorti....</mat-option>
+                <mat-option value="">Intangible Assets</mat-option>
+                <mat-option value="">Miscellaneous Income</mat-option>
+                <mat-option value="">Motor Vehicles</mat-option>
+                <mat-option value="">Office Equipment</mat-option>
+                <mat-option value="">Plant and Machinery</mat-option>
+                <mat-option value="">Rent Income</mat-option>
+                <mat-option value="">Royalties Received</mat-option>
+                <mat-option value="">Sales of Assets</mat-option>
+                <mat-option value="">Stock</mat-option>
+              </mat-select>
+            </td>
+            <td>
+              <input
+                type="number"
+                name="quantity"
+                placeholder="Quantity"
+                id="quantity"
+                formControlName="quantity"
+                required
+              />
+            
+            </td>
+            <td>
+              <input
+                type="number"
+                name="unitPrice"
+                placeholder="Unit Price"
+                id="unitPrice"
+                formControlName="unitPrice"
+              />
+              <p *ngIf="productForm.get('unitPrice').hasError('required') && productForm.get('unitPrice').touched" style="color: red;">Unit Price is required</p>
+            </td>
+            
+            <td>
+              <input
+                type="number"
+                name="vatPercentage"
+                placeholder="VAT%"
+                id="vatPercentage"
+                formControlName="vatPercentage"
+              />
+              <p *ngIf="productForm.get('vatPercentage').hasError('required') && productForm.get('vatPercentage').touched" style="color: red;">VAT % is required</p>
+            </td>
+            <td>
+              <span style="color: black" 
+                >{{ getCurrencySymbol() }}
+                {{ row.get("vatAmount")?.value | number : "1.2-2" }}</span
+              >
+            </td>
+            <td>
+              <span style="color: black" 
+                >{{ getCurrencySymbol()
+                }}{{ row.get("grossTotal")?.value | number : "1.2-2" }}</span
+              >
+            </td>
+            <td
+              style="display: flex; flex-direction: row; align-items: center"
+              class="td-btn"
+            >
+              <button type="button" id="add" (click)="addRow()" *ngIf="i === rows.length - 1">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button
+                type="button"
+                id="delete"
+                style="background-color: red"
+                (click)="deleteRow(i)"
+              >
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+
+      <tr class="tr-3">
+        <td colspan="14" *ngIf="!showProductForm">
+          <h1>No Products</h1>
+          <p>Add products to your Invoice</p>
+
+          <button type="button" (click)="toggleProductForm()"  >
+            <i class="fa-solid fa-plus"></i>Let's Add Products
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <div class="invoice-notes-details">
+    <div class="invoice-notes">
+      <div>
+        <label>Additional Notes</label>
+        <textarea
+          name="invoice-terms"
+          cols="30"
+          rows="4"
+          style="font-size: 0.9rem; padding: 10px"
+          contenteditable
+          [(ngModel)]="notes"
+         
+        >
+    </textarea
+        >
+      </div>
+      <div class="">
+        <label for="signature">Invoice Generated By:</label>
+        <button (click)="openSignatureDialog()">Add Signature</button>
+      </div>
+    </div>
+
+    <div class="total-container">
+      <div class="sub">
+        <span>Total Quantity</span>
+        <p class="Amount">{{ getTotalQuantity() }}</p>
+      </div>
+      <div class="sub">
+        <span>Dispatched/sent Quantity</span>
+        <p class="Amount">0</p>
+      </div>
+      <div class="sub">
+        <span>Sub Amount ({{ getCurrencyShort() }})</span>
+        <p class="Amount">
+          {{ getCurrencySymbol() }} {{ calculateTotal() | number : "1.2-2" }}
+        </p>
+      </div>
+      <div class="sub">
+        <span style="font-weight: 500"
+          >Total Amount ({{ getCurrencyShort() }})</span
+        >
+        <p class="Amount" style="border-bottom: none">
+          {{ getCurrencySymbol() }} {{ calculateTotal() | number : "1.2-2" }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <div>
+      <button class="button1" routerLink="/home"><i class="fa-solid fa-backward"></i>Back</button>
+    </div>
+    <div class="button-container">
+      <button class="button1" (click)="resetValues()">
+        <i class="fa-solid fa-rotate-right"></i>Reset
+      </button>
+      <button class="button2" routerLink="/list" (click)="buttonClick()" >
+        <i class="fa-regular fa-circle-check"></i>Save
+      </button>
+    </div>
+  </div>
+
+</div>

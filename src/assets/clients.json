@@ -1,0 +1,463 @@
+{
+  "clients": [
+    {
+      "name": "Blake",
+      "referenceCode": "BLK123",
+      "email": "blake@example.com",
+      "currency": "USD",
+      "contactPerson": "John Doe",
+      "vatNumber": "VAT123",
+      "registrationNumber": "REG456",
+      "telNumber": "+1 123-456-7890",
+      "address": "123 Tech Street, Cityville, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 1.0
+    },
+    {
+      "name": "Alex",
+      "referenceCode": "ALX456",
+      "email": "alex@example.com",
+      "currency": "EUR",
+      "contactPerson": "Jane Doe",
+      "vatNumber": "VAT456",
+      "registrationNumber": "REG789",
+      "telNumber": "+1 987-654-3210",
+      "address": "123 Tech Street, Cityville, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 0.85
+    },
+    {
+      "name": "DEMO",
+      "referenceCode": "DMO789",
+      "email": "demo@example.com",
+      "currency": "GBP",
+      "contactPerson": "Demo Person",
+      "vatNumber": "VAT789",
+      "registrationNumber": "REG012",
+      "telNumber": "+44 20 1234 5678",
+      "address": "123 Tech Street, Cityville, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 0.74
+    },
+    {
+      "name": "Kevin Gracevill",
+      "referenceCode": "KGV101",
+      "email": "kevin@example.com",
+      "currency": "USD",
+      "contactPerson": "Kevin Smith",
+      "vatNumber": "VAT101",
+      "registrationNumber": "REG345",
+      "telNumber": "+1 567-890-1234",
+      "address": "456 Main Street, Villageton, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 1.0
+    },
+    {
+      "name": "testesmiths",
+      "referenceCode": "TST987",
+      "email": "test@example.com",
+      "currency": "AUD",
+      "contactPerson": "Test Person",
+      "vatNumber": "VAT987",
+      "registrationNumber": "REG678",
+      "telNumber": "+61 2 1234 5678",
+      "address": "789 Oak Street, Townsville, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 0.72
+    },
+    {
+      "name": "pollo",
+      "referenceCode": "PL123",
+      "email": "pollo@example.com",
+      "currency": "EUR",
+      "contactPerson": "Pollo Manager",
+      "vatNumber": "VAT123",
+      "registrationNumber": "REG901",
+      "telNumber": "+34 91 123 45 67",
+      "address": "101 Pine Street, Forestville, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 0.85
+    },
+    {
+      "name": "Indian Local Bazaar",
+      "referenceCode": "ILB456",
+      "email": "bazaar@example.com",
+      "currency": "INR",
+      "contactPerson": "Bazaar Owner",
+      "vatNumber": "VAT456",
+      "registrationNumber": "REG234",
+      "telNumber": "+91 12345 67890",
+      "address": "567 Market Street, Bazaarton, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 75.0
+    },
+    {
+      "name": "Mujtaba Zahid Naqvi",
+      "referenceCode": "MZN789",
+      "email": "mujtaba@example.com",
+      "currency": "PKR",
+      "contactPerson": "Mujtaba Naqvi",
+      "vatNumber": "VAT789",
+      "registrationNumber": "REG567",
+      "telNumber": "+92 345 678 9012",
+      "address": "789 Garden Street, Plantville, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 275.0
+    },
+    {
+      "name": "Reine Ivanilov",
+      "referenceCode": "RIV101",
+      "email": "reine@example.com",
+      "currency": "SEK",
+      "contactPerson": "Reine Ivanilov",
+      "vatNumber": "VAT101",
+      "registrationNumber": "REG890",
+      "telNumber": "+46 8 123 4567",
+      "address": "234 Maple Street, Hillside, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 10.0
+    },
+    {
+      "name": "Pearce Novic",
+      "referenceCode": "PN123",
+      "email": "pearce@example.com",
+      "currency": "NZD",
+      "contactPerson": "Pearce Novic",
+      "vatNumber": "VAT123",
+      "registrationNumber": "REG123",
+      "telNumber": "+64 9 123 4567",
+      "address": "456 Birch Street, Mountainview, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 1.2
+    },
+    {
+      "name": "Adore Cawthra",
+      "referenceCode": "AC456",
+      "email": "adore@example.com",
+      "currency": "CAD",
+      "contactPerson": "Adore Cawthra",
+      "vatNumber": "VAT456",
+      "registrationNumber": "REG456",
+      "telNumber": "+1 416-123-4567",
+      "address": "789 Cedar Street, Laketown, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 1.25
+    },
+    {
+      "name": "George Noods",
+      "referenceCode": "GN789",
+      "email": "george@example.com",
+      "currency": "USD",
+      "contactPerson": "George Noods",
+      "vatNumber": "VAT789",
+      "registrationNumber": "REG789",
+      "telNumber": "+1 212-345-6789",
+      "address": "101 Oak Street, Parkville, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 1.0
+    },
+    {
+      "name": "Fabio Grafton",
+      "referenceCode": "FG101",
+      "email": "fabio@example.com",
+      "currency": "EUR",
+      "contactPerson": "Fabio Grafton",
+      "vatNumber": "VAT101",
+      "registrationNumber": "REG012",
+      "telNumber": "+39 02 1234 5678",
+      "address": "234 Pine Street, Pinetown, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 0.85
+    },
+    {
+      "name": "Charles Cant",
+      "referenceCode": "CC123",
+      "email": "charles@example.com",
+      "currency": "GBP",
+      "contactPerson": "Charles Cant",
+      "vatNumber": "VAT123",
+      "registrationNumber": "REG345",
+      "telNumber": "+44 20 9876 5432",
+      "address": "567 Maple Street, Mapletown, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 0.74
+    },
+    {
+      "name": "Terence Boustred",
+      "referenceCode": "TB456",
+      "email": "terence@example.com",
+      "currency": "AUD",
+      "contactPerson": "Terence Boustred",
+      "vatNumber": "VAT456",
+      "registrationNumber": "REG678",
+      "telNumber": "+61 2 9876 5432",
+      "address": "789 Cedar Street, Laketown, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 0.72
+    },
+    {
+      "name": "Flynn MacGow",
+      "referenceCode": "FM789",
+      "email": "flynn@example.com",
+      "currency": "USD",
+      "contactPerson": "Flynn MacGow",
+      "vatNumber": "VAT789",
+      "registrationNumber": "REG901",
+      "telNumber": "+1 345-678-9012",
+      "address": "101 Oak Street, Parkville, Techland",
+      "addressType": "Ship To",
+      "exchangeRate": 1.0
+    },
+    {
+      "name": "Ashley Alidginton",
+      "referenceCode": "AA101",
+      "email": "ashley@example.com",
+      "currency": "EUR",
+      "contactPerson": "Ashley Alidginton",
+      "vatNumber": "VAT101",
+      "registrationNumber": "REG234",
+      "telNumber": "+33 1 23 45 67 89",
+      "address": "234 Pine Street, Pinetown, Techland",
+      "addressType": "Bill To",
+      "exchangeRate": 0.85
+    }
+  ],
+
+   "products": [
+      {
+        "name": "Shirt",
+        "sku": "SHRT001",
+        "unitPrice": 25.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Inventory",
+        "sku": "INV002",
+        "unitPrice": 149.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Beds",
+        "sku": "BED003",
+        "unitPrice": 399.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Samsung Phone",
+        "sku": "SAMSUNG004",
+        "unitPrice": 799.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Work",
+        "sku": "WRK005",
+        "unitPrice": 49.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Coca Cola 330ml",
+        "sku": "COCA006",
+        "unitPrice": 1.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Apple iPhone 13 Pro White",
+        "sku": "IP13WHT007",
+        "unitPrice": 1299.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Pencil",
+        "sku": "PEN008",
+        "unitPrice": 0.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Trimming",
+        "sku": "TRIM009",
+        "unitPrice": 14.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Garden Soil",
+        "sku": "GSOIL010",
+        "unitPrice": 7.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Garden Rocks",
+        "sku": "GROCKS011",
+        "unitPrice": 19.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Fountain",
+        "sku": "FNTN012",
+        "unitPrice": 149.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Test Product",
+        "sku": "TEST013",
+        "unitPrice": 9.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Apple iPhone 12",
+        "sku": "IP12BLK014",
+        "unitPrice": 1099.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Apple iPhone 13",
+        "sku": "IP13BLK015",
+        "unitPrice": 1199.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Apple iPhone 11",
+        "sku": "IP11BLK016",
+        "unitPrice": 999.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Apple iPhone 15",
+        "sku": "IP15BLK017",
+        "unitPrice": 1399.99,
+        "currency": "USD"
+      },
+      {
+        "name": "Apple iPhone X",
+        "sku": "IPXBLK018",
+        "unitPrice": 899.99,
+        "currency": "USD"
+      }
+    ],
+    
+      "companies": [
+        {
+          "name": "Web Shop",
+          "address": "101 Web Street, Cityweb, Webland",
+          "registrationNumber": "REG004",
+          "mobileNumber": "+1 345-678-9012",
+          "email": "info@webshop.com",
+          "website": "www.webshop.com",
+          "companyOwner": "Alice Williams"
+        },
+        {
+          "name": "Puma Sports",
+          "address": "200 Sports Avenue, Citysports, Sportsville",
+          "registrationNumber": "REG005",
+          "mobileNumber": "+49 123 456 7890",
+          "email": "info@pumasports.com",
+          "website": "www.pumasports.com",
+          "companyOwner": "Michael Brown"
+        },
+        {
+          "name": "NB Sports",
+          "address": "300 Sports Street, Citysports, Sportstown",
+          "registrationNumber": "REG006",
+          "mobileNumber": "+1 416-123-4567",
+          "email": "info@nbsports.com",
+          "website": "www.nbsports.com",
+          "companyOwner": "Emma Davis"
+        },
+        {
+          "name": "Demo",
+          "address": "Demo Address",
+          "registrationNumber": "REG007",
+          "mobileNumber": "+1 123-456-7890",
+          "email": "info@demo.com",
+          "website": "www.demo.com",
+          "companyOwner": "Alex Johnson"
+        },
+        {
+          "name": "BlitzBills",
+          "address": "BlitzBills Address",
+          "registrationNumber": "REG008",
+          "mobileNumber": "+1 987-654-3210",
+          "email": "info@blitzbills.com",
+          "website": "www.blitzbills.com",
+          "companyOwner": "Sophie Martin"
+        },
+        {
+          "name": "Gray Nicolls",
+          "address": "Gray Nicolls Address",
+          "registrationNumber": "REG009",
+          "mobileNumber": "+44 20 1234 5678",
+          "email": "info@graynicolls.com",
+          "website": "www.graynicolls.com",
+          "companyOwner": "Mark Anderson"
+        },
+        {
+          "name": "Operify",
+          "address": "Operify Address",
+          "registrationNumber": "REG010",
+          "mobileNumber": "+1 345-678-9012",
+          "email": "info@operify.com",
+          "website": "www.operify.com",
+          "companyOwner": "Sophia Miller"
+        },
+        {
+          "name": "Probiz",
+          "address": "Probiz Address",
+          "registrationNumber": "REG011",
+          "mobileNumber": "+49 123 456 7890",
+          "email": "info@probiz.com",
+          "website": "www.probiz.com",
+          "companyOwner": "William White"
+        },
+        {
+          "name": "Refize",
+          "address": "Refize Address",
+          "registrationNumber": "REG012",
+          "mobileNumber": "+1 416-123-4567",
+          "email": "info@refize.com",
+          "website": "www.refize.com",
+          "companyOwner": "Olivia Davis"
+        },
+        {
+          "name": "Westor",
+          "address": "Westor Address",
+          "registrationNumber": "REG013",
+          "mobileNumber": "+1 123-456-7890",
+          "email": "info@westor.com",
+          "website": "www.westor.com",
+          "companyOwner": "Daniel Clark"
+        },
+        {
+          "name": "Bizmogul",
+          "address": "Bizmogul Address",
+          "registrationNumber": "REG014",
+          "mobileNumber": "+1 987-654-3210",
+          "email": "info@bizmogul.com",
+          "website": "www.bizmogul.com",
+          "companyOwner": "Isabella Lee"
+        },
+        {
+          "name": "Salesdome",
+          "address": "Salesdome Address",
+          "registrationNumber": "REG015",
+          "mobileNumber": "+44 20 1234 5678",
+          "email": "info@salesdome.com",
+          "website": "www.salesdome.com",
+          "companyOwner": "Ethan Wilson"
+        },
+        {
+          "name": "Hatchdrive",
+          "address": "Hatchdrive Address",
+          "registrationNumber": "REG016",
+          "mobileNumber": "+1 345-678-9012",
+          "email": "info@hatchdrive.com",
+          "website": "www.hatchdrive.com",
+          "companyOwner": "Ava Taylor"
+        }
+      ]
+    }
+    
+
+  
+
+
+
+

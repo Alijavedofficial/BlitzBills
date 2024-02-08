@@ -1,0 +1,271 @@
+/* src/app/client-details/client-details.component.css */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #7a869a;
+  opacity: 0.8;
+}
+.address {
+  background-color: #f2f3f4;
+  height: 80%;
+}
+.clientName {
+  border: 1px solid #0052cc;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+}
+
+.client {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  margin: auto;
+}
+.client div {
+  width: calc(33.33% - 10px); /* Adjust the width as needed */
+
+  box-sizing: border-box;
+}
+form h2 {
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+input:focus {
+  border: 1px solid #0f172a;
+}
+
+h2 {
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.invoice-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+.Item {
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+table tr th {
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 13px;
+  color: aliceblue;
+}
+table tr td {
+  padding: 0px 10px;
+  cursor: pointer;
+}
+.tr-2 {
+  color: #505f79;
+  background-color: #fff;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #dfe1e6;
+  
+}
+.tr-2 input{
+  color: black;
+}
+tr:hover {
+  background-color: #f2f3f4;
+}
+td {
+  color: aliceblue;
+}
+
+th {
+  background-color:#0f172a;
+}
+h2 {
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+button {
+  padding: 7px;
+  border-radius: 4px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background-color: #0f172a;
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  margin: 20px auto;
+  font-weight: 500;
+}
+.fa-plus {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.fa-trash-can {
+  color: white;
+  font-size: 17px;
+}
+h1 {
+  font-size: 1.8rem;
+  color: #172b4d;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-size: 0.9rem;
+  color: #505f79;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+.tr-3 {
+  border: 1px solid #dfe1e6;
+  border-top: 0px;
+}
+.tr-3 td {
+  padding: 2px 10px;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  background-color: #f4f5f7;
+  align-items: center;
+  justify-content: center;
+}
+.td-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.td-btn .fa-plus {
+  font-size: 12px;
+  padding: 1px;
+}
+.td-btn button {
+  padding: 5px 4px;
+  align-items: center;
+}
+.invoice-notes-details {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+.total-container {
+  display: grid;
+  border: 2px solid #172b4d;
+  border-radius: 4px;
+  width: auto;
+  float: right;
+  height: fit-content;
+}
+.sub {
+  display: flex;
+  flex-direction: row;
+}
+.sub span {
+  width: 50%;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: 400;
+  text-align: end;
+  height: 100%;
+  color: #172b4d;
+  border-bottom: 1px solid #172b4d;
+}
+.sub p {
+  width: 50%;
+  padding: 10px;
+  color: #fff;
+  background-color: #0f172a;
+  border-bottom: 1px solid #fff;
+  height: 100%;
+  text-align: end;
+  font-weight: 600;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+.button1 {
+  background-color: #fff;
+  color: #505f79;
+  border: 1px solid #dfe1e6;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  gap: 10px;
+}
+.button2 {
+  transition: all 0.2s;
+  padding: 10px 20px;
+  gap: 10px;
+}
+span {
+  font-size: 13px;
+}
+.tr-2 mat-select {
+  
+  color: #505f79;
+  font-size: 0.875rem;
+  background-color: #fff;
+  box-shadow: 0 0 6px #172b4d0a;
+  border-radius: 4px;
+  
+  margin-top: -8px;
+  justify-content: space-between;
+}
+.productt {
+  padding: 8px 40px;
+  width:15%;
+}
+.categoryy{
+  width: 15%;
+}
+.mat-from-field{
+  border: none;
+  overflow: hidden;
+  padding: 10px;
+}
+button:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mat-select-value {
+  padding: 0 8px; /* Adjust the values as needed */
+}

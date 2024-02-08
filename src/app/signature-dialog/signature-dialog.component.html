@@ -1,0 +1,10 @@
+<!-- signature-pad/signature-pad.component.html -->
+
+<div class="signature-pad-container">
+  <signature-pad [options]="signaturePadOptions" #signaturePad></signature-pad>
+
+  <div class="signature-pad-buttons">
+    <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+    <button mat-raised-button color="primary" (click)="onAdd()">Add Signature</button>
+  </div>
+</div>

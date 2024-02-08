@@ -35,7 +35,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "node_modules/tailwindcss/base.css",
+  "node_modules/tailwindcss/components.css",
+  "node_modules/tailwindcss/utilities.css"
             ],
             "scripts": []
           },
@@ -94,6 +98,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []

@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@ng-select/ng-select": "^12.0.4",
+    "angularx-qrcode": "^17.0.0",
+    "ngx-qrcode2": "^9.0.0",
+    "qrcode-generator": "^1.4.4"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5"
+  }
+}

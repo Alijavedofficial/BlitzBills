@@ -6,4 +6,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development Server
 
 # BlitzBills
-BlitzBills is a free invoice generator 
+BlitzBills 

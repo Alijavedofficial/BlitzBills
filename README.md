@@ -6,4 +6,3 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development Server
 
 # BlitzBills
-BlitzBills 
